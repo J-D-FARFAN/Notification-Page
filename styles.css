@@ -1,0 +1,282 @@
+:root {
+    --Red: hsl(1, 90%, 64%);
+    /* used */
+    --Blue: hsl(219, 85%, 26%);
+    /* used */
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+
+
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+
+
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+
+    --blue: hsl(219, 14%, 63%);
+
+
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+    /* used */
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    background-color: var(--Very-light-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+footer {
+    position: relative;
+    bottom: 1rem;
+    margin-top: 4rem;
+}
+
+span.name {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    transition: .2s ease;
+}
+
+h1 {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+span.blue {
+    color: var(--Blue);
+    font-weight: 800;
+}
+
+b {
+    font-weight: 800;
+    color: var(--Dark-grayish-blue);
+    transition: .2s ease;
+}
+
+main {
+    background-color: white;
+    border-radius: 20px;
+    width: 670px;
+    padding: 30px;
+    margin: 50px 0px;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.notification-number {
+    display: flex;
+
+    align-items: center;
+}
+
+main .tag {
+    background-color: var(--Blue);
+    height: 25px;
+    width: 30px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: .5rem;
+}
+
+.mark {
+    color: var(--Dark-grayish-blue);
+    transition: .2s ease;
+}
+
+span.active-marker {
+    background-color: var(--Red);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: .5rem;
+    display: none;
+
+}
+
+.header-notification {
+    display: flex;
+}
+
+.notification {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+    transition: .8s ease;
+}
+
+
+.profile img {
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+.title {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+
+}
+
+.time {
+    color: var(--blue);
+}
+
+p {
+    margin: 0;
+}
+
+.message-content {
+    margin-left: 64px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    transition: .2s ease;
+    border: 2px solid var(--Very-light-grayish-blue);
+}
+
+.notification.message {
+    background-color: white;
+}
+
+.picture img {
+    width: 3rem;
+    padding: 2px;
+    border-radius: 8px;
+    background: none;
+    transition: .2s ease;
+}
+
+.notification.pic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer {
+    color: var(--Blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    font-weight: 800;
+}
+
+
+/* HOVER */
+
+b:hover {
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+span.name:hover {
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+.message-content:hover {
+    margin-left: 64px;
+    background-color: var(--Light-grayish-blue-1);
+    padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.picture img:hover {
+    cursor: pointer;
+    background-color: var(--Light-grayish-blue-1);
+}
+
+.mark span:hover {
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+.notification:hover {
+    background-color: var(--Very-light-grayish-blue);
+    cursor: pointer;
+}
+
+
+
+
+/* UNREAD */
+.notification.unread {
+    background-color: var(--Very-light-grayish-blue);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+}
+
+.notification.unread.pic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.notification.unread span.active-marker {
+    transition: .3s ease;
+    display: inline-flex;
+}
+
+
+
+@media screen and (max-width: 745px) {
+    body {
+        background-color: white;
+        font-size: 14px;
+    }
+
+    main {
+        width: auto;
+        padding: 20px;
+    }
+
+    .profile img {
+        width: 2.5rem;
+    }
+
+    .message-content {
+        margin-top: 1rem;
+    }
+
+    .picture img {
+        width: 2.5rem;
+    }
+    h1{
+        font-size: 1.25rem;
+    }
+    footer {
+        position: relative;
+        bottom: 1.5rem;
+        margin-top: 2rem;
+    }
+}

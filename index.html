@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Notifications page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+
+  <main>
+    <div class="header">
+      <div class="notification-number">
+        <h1>Notifications</h1>
+        <div class="tag" id="count"> 
+          20
+        </div>
+      </div>
+      <div class="mark" onclick="allRead()">
+        <span>Mark all as read</span>
+      </div>
+    </div>
+    <section class="notifications">
+
+      <div class="notification unread" onclick="(read(event))">
+        <div class="header-notification">
+          <div class="profile">
+            <img src="./assets/images/avatar-mark-webber.webp" alt="">
+          </div>
+          <div class="content">
+            <div class="title">
+              <p>
+                <span class="name">Mark Webber&nbsp;</span>reacted to your recent post&nbsp;<b>My first tournament
+                  today!</b> <span class="active-marker"></span>
+              </p>
+
+            </div>
+            <div class="time">1m ago</div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="notification unread" onclick="(read(event))">
+        <div class="header-notification">
+          <div class="profile">
+            <img src="./assets/images/avatar-angela-gray.webp" alt="">
+          </div>
+          <div class="content">
+            <div class="title">
+              <p>
+                <span class="name">Angela Gray&nbsp;</span>followed you<span class="active-marker"></span>
+              </p>
+
+
+            </div>
+            <div class="time">5m ago</div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="notification unread" onclick="(read(event))">
+        <div class="header-notification">
+          <div class="profile">
+            <img src="./assets/images/avatar-jacob-thompson.webp" alt="">
+          </div>
+          <div class="content">
+            <div class="title">
+              <p>
+                <span class="name">Jacob Thompson&nbsp;</span>has joined your group&nbsp;<b class="group">Chess Club</b>
+                <span class="active-marker"></span>
+              </p>
+              
+             
+            </div>
+            <div class="time">1 day ago</div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="notification message" onclick="(read(event))">
+        <div class="header-notification">
+          <div class="profile">
+            <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="">
+          </div>
+          <div class="content">
+            <div class="title">
+              <p><span class="name">Rizky Hasanuddin&nbsp;</span>sent you a private message
+                <span class="active-marker"></span></p>
+              
+            </div>
+            <div class="time">5 days ago</div>
+          </div>
+        </div>
+        <div class="message-content">
+          <p>
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+            I'm already having lots of fun and improving my game.
+          </p>
+        </div>
+      </div>
+
+      <div class="notification pic" onclick="(read(event))">
+        <div class="header-notification ">
+          <div class="profile">
+            <img src="./assets/images/avatar-kimberly-smith.webp" alt="">
+          </div>
+          <div class="content">
+            <div class="title">
+              <p><span class="name">Kimberly Smith&nbsp;</span>commented on your picture
+                <span class="active-marker"></span></p>
+              
+            </div>
+            <div class="time">1 week ago</div>
+
+          </div>
+        </div>
+        <div class="picture">
+          <img src="./assets/images/image-chess.webp" alt="">
+        </div>
+
+      </div>
+
+      <div class="notification" onclick="(read(event))">
+        <div class="header-notification">
+          <div class="profile">
+            <img src="./assets/images/avatar-nathan-peterson.webp" alt="">
+          </div>
+          <div class="content">
+            <div class="title">
+              <p><span class="name">Nathan Peterson&nbsp;</span>reacted to your recent post 5 end-game strategies to
+                increase your win rate today! <span class="active-marker"></span></p>
+              <!--   <div class="text"></div> -->
+
+            </div>
+            <div class="time">2 weeks ago</div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="notification" onclick="(read(event))">
+        <div class="header-notification">
+          <div class="profile">
+            <img src="./assets/images/avatar-anna-kim.webp" alt="">
+          </div>
+          <div class="content">
+            <div class="title">
+              <p><span class="name">Anna Kim&nbsp;</span>left the group&nbsp;<b class="group">Chess Club</b>
+                <span class="active-marker"></span></p>
+              
+            </div>
+            <div class="time">2 weeks ago</div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
